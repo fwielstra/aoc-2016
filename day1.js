@@ -25,8 +25,8 @@ const updatePosition = distance => {
   switch(currentHeading) {
     case 'N': currentPosition.y += distance; break;
     case 'E': currentPosition.x += distance; break;
-    case 'S': currentPosition.x -= distance; break;
-    case 'W': currentPosition.y -= distance; break;
+    case 'S': currentPosition.y -= distance; break;
+    case 'W': currentPosition.x -= distance; break;
   }
 }
 
