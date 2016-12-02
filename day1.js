@@ -30,11 +30,13 @@ const updatePosition = distance => {
   }
 }
 
+const calculateDistanceTo = point => Math.abs(currentPosition.x) + Math.abs(currentPosition.y)
+
 steps.forEach((step, index) => {
   updateHeading(step.direction);
   updatePosition(step.distance)
   console.log('step', index, 'heading', currentHeading, 'distance', step.distance, 'new position', currentPosition);
 })
 
-console.log('bunny HQ location:', currentPosition, 'distance to HQ from 0,0:', Math.abs(currentPosition.x) + Math.abs(currentPosition.y))
+console.log('bunny HQ location:', currentPosition, 'distance to HQ from 0,0:', calculateDistanceTo(currentPosition))
 
